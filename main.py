@@ -9,7 +9,7 @@ class Noticias(db.Model):
     titulo = db.Column(db.String(100), nullable=False)
     descricao = db.Column(db.String(1000), nullable=False)
     categoria = db.Column(db.String(100), nullable=False)
-    resumo = db.Column(db.String(120), nullable=False)
+    resumo = db.Column(db.String(1000), nullable=False)
     autor = db.Column(db.String(100), nullable=False)
     date = db.Column(db.String(6), nullable=False)
     image_data = db.Column(db.String(6), nullable=False)
@@ -71,6 +71,7 @@ def logout():
 @ app.route('/list', methods=['GET', 'POST'])
 def list():
     data_noticias = db.session.query(Noticias)
+
     return render_template('/list.html', data=data_noticias)
 
 

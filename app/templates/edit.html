@@ -30,15 +30,17 @@ body %}
   </div>
 
   <div class="form-floating mt-3 mb-3 was-validate">
-    <textarea
-      class="form-control"
-      id="resumoArea"
+    <input
+      type="text"
       name="resumo"
       for="resumo"
-      style="height: 80px"
-    >
-    {{data.resumo}}</textarea
-    >
+      class="form-control"
+      id="resumoArea"
+      maxlength="80"
+      style="height: 60px"
+      value="{{data.resumo}}"
+    />
+
     <label for="resumo">Breve resumo</label>
   </div>
 
@@ -78,6 +80,7 @@ body %}
       class="form-control"
       id="dateNoticia"
       value="{{data.date}}"
+      required
     />
     <label for="date">Inserir data</label>
   </div>

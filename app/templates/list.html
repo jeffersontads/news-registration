@@ -32,7 +32,7 @@ messages %}
 
       <div class="card-body">
         <h5 class="card-title">{{loop.index}} - {{noticia.titulo}}</h5>
-        <p class="card-text">{{noticia.resumo}} ---- {{noticia.image_data}}</p>
+        <p class="card-text">{{noticia.resumo}}</p>
         <a
           href="{{ url_for('edit_data', id=noticia.id) }}"
           class="btn btn-secondary btn-sm"
