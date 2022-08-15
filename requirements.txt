@@ -11,8 +11,6 @@ PyJWT==1.7.1
 PyMySQL==1.0.2
 requests==2.22.0
 SQLAlchemy==1.4.40
-ufw==0.36
 virtualenv==20.0.17
 virtualenv-clone==0.3.0
 Werkzeug==2.2.2
-xkit==0.0.0
