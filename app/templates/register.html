@@ -1,6 +1,30 @@
+{% extends 'base.html' %} {% block title %} input data {% endblock %} {% block
+body %}
+
+<h1 class="title mt-5">REGISTRAR - SE</h1>
+<p>
+  CADASTRE-SE PARA TER ACESSO AO SISTEMA E PODER EXLCUIR, EDITAR UMA NOVA
+  NOTICIA
+</p>
 <form action="" method="post">
-  <input type="text" name="name" placeholder="Insira um nome" />
-  <input type="email" name="email" placeholder="Insira um email" />
-  <input type="password" name="password" placeholder="********" />
-  <input type="submit" value="Cadastrar" />
+  <input
+    class="form-control form-control-lg"
+    type="text"
+    name="name"
+    placeholder="Insira um nome"
+  />
+  <input
+    class="form-control form-control-lg mt-3 mb-3"
+    type="email"
+    name="email"
+    placeholder="Insira um email"
+  />
+  <input
+    class="form-control form-control-lg"
+    type="password"
+    name="password"
+    placeholder="********"
+  />
+  <input class="btn btn-primary mt-5 mb-5" type="submit" value="Cadastrar" />
 </form>
+{% endblock %}

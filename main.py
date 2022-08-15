@@ -40,6 +40,7 @@ def register():
         user = User(name, email, pwd)
         db.session.add(user)
         db.session.commit()
+        return redirect(url_for('login'))
 
     return render_template('register.html')
 

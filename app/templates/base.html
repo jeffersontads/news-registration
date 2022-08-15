@@ -42,18 +42,25 @@
             <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
           </svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Noticias</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Portifólio</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Quem Somos</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Contato</a>
         {% if current_user.is_authenticated %}
+        <a
+          class="py-2 d-none d-md-inline-block"
+          href="{{url_for('input_data')}}"
+          >CADASTRAR NOTÍCIAS</a
+        >
         <a class="py-2 d-none d-md-inline-block" href="{{url_for('logout')}}"
-          >SAIR</a
+          >Sair do Sistema</a
         >
 
         {% else %}
+        <a class="py-2 d-none d-md-inline-block" href="{{url_for('home')}}"
+          >Noticias</a
+        >
+        <a class="py-2 d-none d-md-inline-block" href="#">Portifólio</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Quem Somos</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Contato</a>
         <a class="py-2 d-none d-md-inline-block" href="{{ url_for('login') }}"
-          >LOGAR</a
+          >Logar no sistema</a
         >
         {% endif %}
       </div>
