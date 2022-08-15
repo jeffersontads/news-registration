@@ -1,0 +1,54 @@
+{% extends './base.html' %} {% block title %} login {% endblock %} {% block body
+%} {% block customCSS %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/login.css') }}"
+/>
+{% endblock %}
+
+<div class="text-center w-50">
+  <form class="form-signin" action="" method="post">
+    <img
+      class="mb-4"
+      src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+      alt=""
+      width="72"
+      height="72"
+    />
+    <h1 class="h3 mb-3 font-weight-normal">Por favor faça login</h1>
+    <p>email = admin@gmail.com</p>
+    <p>pass = admin</p>
+
+    <input
+      type="email"
+      name="email"
+      id="inputUserName"
+      class="form-control"
+      placeholder="Email do usuário"
+      required
+      autofocus
+    />
+    <br />
+    <input
+      type="password"
+      name="password"
+      id="inputPassword"
+      class="form-control"
+      placeholder="Senha"
+      required
+    />
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Logar
+    </button>
+    <a
+      href="/auth/register"
+      class="btn btn-lg btn-warning btn-block"
+      type="submit"
+    >
+      REGISTRAR
+    </a>
+    <p class="mt-5 mb-3 text-muted">&copy; Jefferson R. Sotto 2022/2023</p>
+  </form>
+</div>
+
+{% endblock %}

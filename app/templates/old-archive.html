@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block title %} Jefferson Sotto {% endblock %} {%
+block body %} {% endfor %} {% endif %} {% endwith %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for noticia in data %}
+
+  <div class="col">
+    <div class="card h-100 w-100">
+      <div>
+        <img
+          class="img-responsive w-100"
+          src="{{url_for('static', filename='img/img-teste.png')}}"
+        />
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">{{loop.index}} - {{noticia.titulo}}</h5>
+        <p class="card-text">{{noticia.resumo}} ---- {{noticia.image_data}}</p>
+        <a
+          href="{{ url_for('edit_data', id=noticia.id) }}"
+          class="btn btn-secondary btn-sm"
+          >Editar</a
+        >
+        <a
+          href="{{ url_for('delete', id=noticia.id) }}"
+          class="btn btn-danger btn-sm"
+          onclick="return confirm('Tem certeza que deseja deletar esta notícia?')"
+          >Deletar</a
+        >
+        <a
+          href="{{ url_for('noticia_data', id=noticia.id) }}"
+          class="btn btn-primary btn-sm"
+          >Visualizar noticia</a
+        >
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Criado em: {{noticia.date}}</small>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

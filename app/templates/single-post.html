@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block title %} edit data {% endblock %} {% block
+body %}
+
+<h1 class="title mt-5 text-black-50 text-center">VISUALIZAR NOTÍCIAS</h1>
+<input type="hidden" name="id" value="{{data.id}}" />
+
+<div class="container mt-5">
+  <div>
+    <img
+      class="img-responsive w-100"
+      src="{{url_for('static', filename='img/img-teste.png')}}"
+    />
+  </div>
+  <div class="title mt-4 mb-4 text-black-50 text-center">
+    <h1>{{data.titulo}}</h1>
+  </div>
+  <div class="descricao mt-4 mb-4 text-black-100 text-center">
+    <p class="text-center">{{data.descricao}}</p>
+  </div>
+
+  <div
+    class="dados-da-postagem text-left text-uppercase text-black-50 mb-5 mt-5"
+  >
+    <p>Categoria: {{data.categoria}}</p>
+    <p>Publicado em: {{data.date}}</p>
+  </div>
+
+  {% if current_user.is_authenticated %}
+
+  <div class="buttons btn-group-lg mb-5">
+    <a href="{{url_for('list')}}" class="btn btn-secondary btn-group-lg">
+      Voltar para lista de noticias list
+    </a>
+  </div>
+
+  {%else%}
+  <div class="buttons btn-group-lg mb-5">
+    <a href="{{url_for('home')}}" class="btn btn-secondary btn-group-lg">
+      Voltar para lista de noticias home
+    </a>
+  </div>
+</div>
+{% endif %} {% endblock %}
