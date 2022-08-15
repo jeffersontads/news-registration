@@ -6,4 +6,4 @@
 
 <p>Sem logar, o usuário somente poderar ver a lista de noticia e entrar para visualizar as notícias.</p>
 
-<h2>Instalar tudo o quem tem dentro de requeriments.txt, para rodar o sistema localhost, além ter quer instalado python3, pipenv, mysql-connector, mysql e um gerenciador (phpmyadmin). Também deve-se fazer o dump do banco de dados para poder ter a lista de noticias.</h2> 
+<p>Instalar tudo o quem tem dentro de requeriments.txt, para rodar o sistema localhost, além ter quer instalado python3, pipenv, mysql-connector, mysql e um gerenciador (phpmyadmin). Também deve-se fazer o dump do banco de dados para poder ter a lista de noticias.</p> 
